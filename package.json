@@ -1,0 +1,12 @@
+{
+  "name": "safe-ride-prototype",
+  "version": "1.0.0",
+  "description": "Simple sprint 1 prototype for parent registration and ride scheduling",
+  "main": "app.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}
