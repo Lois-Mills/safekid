@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SafeRide Parent Portal</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="header">
+    <h1>SafeRide Parent Portal</h1>
+    <p>Schedule your child's ride home.</p>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <h2>Schedule Ride</h2>
+      <form id="rideForm">
+        <label for="pickupLocation">School Pickup Location</label>
+        <input type="text" id="pickupLocation" placeholder="Enter school pickup location" required />
+
+        <label for="homeAddress">Home Address</label>
+        <input type="text" id="homeAddress" placeholder="Enter home address" required />
+
+        <label for="pickupDate">Pickup Date</label>
+        <input type="date" id="pickupDate" required />
+
+        <label for="pickupTime">Pickup Time</label>
+        <input type="time" id="pickupTime" required />
+
+        <button type="submit">Schedule Ride</button>
+      </form>
+      <p id="rideMessage" class="message"></p>
+    </section>
+    <section class="card">
+        <h2>Child Verification</h2>
+        <form id="childVerificationForm">
+            <label for="verifyChildName">Child Name</label>
+            <input type="text" id="verifyChildName" placeholder="Enter child's name" required />
+
+            <label for="childImage">Upload Child Image</label>
+            <input type="file" id="childImage" accept="image/*" required />
+
+            <label for="verificationCode">Verification Code</label>
+            <input type="text" id="verificationCode" placeholder="Enter pickup code" required />
+
+            <button type="submit">Save Child Verification</button>
+        </form>
+        <p id="childVerificationMessage" class="message"></p>
+    </section>
+
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
