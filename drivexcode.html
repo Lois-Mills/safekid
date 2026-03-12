@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SafeRide Parent Portal</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="header">
+    <h1>SafeRide Parent Portal</h1>
+    <p>Register as a driver to keep kids safe</p>
+  </header>
+
+  <main class="container">
+    <section class="card">
+        <h2>Driver Registration</h2>
+        <form id="driverForm">
+            <label for="driverName">Driver Full Name</label>
+            <input type="text" id="driverName" placeholder="Enter driver's full name" required />
+
+            <label for="driverPhone">Phone Number</label>
+            <input type="tel" id="driverPhone" placeholder="Enter driver's phone number" required />
+
+            <label for="licenseNumber">License Number</label>
+            <input type="text" id="licenseNumber" placeholder="Enter license number" required />
+
+            <label for="driverLicense">Upload Driver's License</label>
+            <input type="file" id="driverLicense" accept="image/*,.pdf" required />
+
+            <button type="submit">Register Driver</button>
+        </form>
+        <p id="driverMessage" class="message"></p>
+    </section>
+
+    
+
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
