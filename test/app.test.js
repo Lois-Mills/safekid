@@ -1,4 +1,9 @@
-const { validateRegistration, validateRide } = require("../app");
+const {
+  validateRegistration,
+  validateRide,
+  validateDriverRegistration,
+  validateChildVerification
+} = require("../app");
 
 test("validateRegistration returns true for valid data", () => {
   const data = {
@@ -42,4 +47,46 @@ test("validateRide returns false when fields are missing", () => {
   };
 
   expect(validateRide(data)).toBe(false);
+});
+
+test("validateDriverRegistration returns true for valid driver data", () => {
+  const data = {
+    driverName: "Kwesi Mensah",
+    driverPhone: "0241111111",
+    licenseNumber: "LIC12345",
+    driverLicenseName: "license.pdf"
+  };
+
+  expect(validateDriverRegistration(data)).toBe(true);
+});
+
+test("validateDriverRegistration returns false if file is missing", () => {
+  const data = {
+    driverName: "Kwesi Mensah",
+    driverPhone: "0241111111",
+    licenseNumber: "LIC12345",
+    driverLicenseName: ""
+  };
+
+  expect(validateDriverRegistration(data)).toBe(false);
+});
+
+test("validateChildVerification returns true for valid child verification data", () => {
+  const data = {
+    childName: "Ama",
+    childImageName: "ama.jpg",
+    verificationCode: "SAFE123"
+  };
+
+  expect(validateChildVerification(data)).toBe(true);
+});
+
+test("validateChildVerification returns false when verification code is missing", () => {
+  const data = {
+    childName: "Ama",
+    childImageName: "ama.jpg",
+    verificationCode: ""
+  };
+
+  expect(validateChildVerification(data)).toBe(false);
 });
