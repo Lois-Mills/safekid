@@ -120,3 +120,20 @@ if (typeof module !== "undefined") {
     validateRide
   };
 }
+
+function validateDriverRegistration(data) {
+  return (
+    data.driverName.trim() !== "" &&
+    data.driverPhone.trim() !== "" &&
+    data.licenseNumber.trim() !== "" &&
+    data.driverLicenseName.trim() !== ""
+  );
+}
+
+function validateChildVerification(data) {
+  return (
+    data.childName.trim() !== "" &&
+    data.childImageName.trim() !== "" &&
+    data.verificationCode.trim() !== ""
+  );
+}
